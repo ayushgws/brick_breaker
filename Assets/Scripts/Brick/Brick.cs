@@ -1,0 +1,77 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Brick : MonoBehaviour
+{
+    
+    [SerializeField] private TextMeshPro txtCount;
+    [SerializeField] private Image imgBrick;
+
+    private int row;
+    private int col;
+
+    private int breakCount=5;
+
+    private bool b_GameOver = false;
+    private bool b_Waning = false;
+
+    public void SetRowAndCol(int row,int col)
+    {
+        this.row = row;
+        this.col = col;
+    }
+
+    public void SetBreakCount(int count)
+    {
+        this.breakCount = count;
+        UpdateBreakCount();
+    }
+    
+    private void UpdateBreakCount()
+    {
+        txtCount.text = breakCount.ToString();
+    }
+
+    private void UpdateBrickImage()
+    {
+        if (ImageLoader.Instance())
+            imgBrick.sprite = ImageLoader.Instance().GetImage(breakCount);
+    }
+
+    public void BallCollide()
+    {
+        breakCount--;
+        UpdateBrickImage();
+        AudioManager.Instance()?.PlayCollideSound();
+        if (breakCount <= 0)
+        {
+            GridSystem.Instance().BrickDestroyed();
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            UpdateBreakCount();
+        }
+    }
+
+    public void GameOverLineTouch()
+    {
+        if (!b_GameOver)
+        {
+            Debug.Log("GameOver");
+        }
+    }
+
+    public void WarningLineTouch()
+    {
+        if (!b_Waning)
+        {
+            Debug.Log("Waning");
+        }
+    }
+
+   
+}
