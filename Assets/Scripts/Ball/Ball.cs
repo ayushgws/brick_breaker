@@ -103,7 +103,8 @@ public class Ball : MonoBehaviour
           
     public void SetDirection(Vector3 target)
     {
-        direction = target;                       
+
+        direction = target;
     }
 
     public void Shoot()
