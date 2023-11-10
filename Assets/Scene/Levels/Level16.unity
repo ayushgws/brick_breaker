@@ -894,7 +894,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4893133671368412158, guid: ffaa299c35ba55240a9f692489148504, type: 3}
       propertyPath: numberOfBalls
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7497180690374015726, guid: ffaa299c35ba55240a9f692489148504, type: 3}
       propertyPath: m_Name
