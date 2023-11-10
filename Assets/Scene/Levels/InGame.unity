@@ -417,7 +417,7 @@ SpriteRenderer:
   m_Size: {x: 8.32, y: 8.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!199 &504366240
@@ -5614,7 +5614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76728ffe779eef448867d3298ef55ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridList: []
   grids:
   - row:
     - brickStrength: 23
@@ -5888,7 +5887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchPosition: {fileID: 2011643167}
-  numberOfBalls: 4
+  numberOfBalls: 1
   launchReady: 1
   collectBallCount: 0
 --- !u!4 &1428552025

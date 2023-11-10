@@ -8,7 +8,7 @@ public class Brick : MonoBehaviour
 {
     
     [SerializeField] private TextMeshPro txtCount;
-    [SerializeField] private Image imgBrick;
+    [SerializeField] private SpriteRenderer imgBrick;
 
     private int row;
     private int col;
@@ -27,7 +27,9 @@ public class Brick : MonoBehaviour
     public void SetBreakCount(int count)
     {
         this.breakCount = count;
+        UpdateBrickImage();
         UpdateBreakCount();
+        
     }
     
     private void UpdateBreakCount()
@@ -37,14 +39,20 @@ public class Brick : MonoBehaviour
 
     private void UpdateBrickImage()
     {
-        if (ImageLoader.Instance())
-            imgBrick.sprite = ImageLoader.Instance().GetImage(breakCount);
+        int dif = 20 - breakCount;
+        float value = (float)dif / 20;
+        imgBrick.color = new Color(value, value, 1, 1);
+
+        //if (ImageLoader.Instance())
+        //{
+        //    Debug.LogError("Image Change");
+        //    imgBrick.sprite = ImageLoader.Instance().GetImage(breakCount);
+        //}
     }
 
     public void BallCollide()
     {
         breakCount--;
-        UpdateBrickImage();
         AudioManager.Instance()?.PlayCollideSound();
         if (breakCount <= 0)
         {
@@ -54,6 +62,7 @@ public class Brick : MonoBehaviour
         else
         {
             UpdateBreakCount();
+            UpdateBrickImage();
         }
     }
 
