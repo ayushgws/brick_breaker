@@ -10,9 +10,18 @@ public class ImageLoader : MonoBehaviour
     {
         return instance;
     }
-
     [SerializeField] private List<Sprite> textureList;
 
+    private void Awake()
+    {
+        if(instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     public Sprite GetImage(int damage)
     {
         return textureList[damage];
