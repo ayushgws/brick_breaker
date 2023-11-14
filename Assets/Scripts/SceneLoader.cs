@@ -39,6 +39,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(References.SplashScene);
     }
 
-   
+   public void OpenLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 
 }

@@ -6,15 +6,68 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
 
-    [SerializeField] private Button btnPlay;
-    // Start is called before the first frame update
-    void Start()
+    private static MenuController instance;
+
+    public static MenuController Instance()
     {
-        btnPlay.onClick.AddListener(OpenHomeScene);
+        return instance;
     }
 
-    public void OpenHomeScene()
+    [SerializeField] private GameObject homePanel;
+    [SerializeField] private GameObject levelPanel;
+    [SerializeField] private GameObject settingPanel;
+    [SerializeField] private GameObject shopPanel;
+    [SerializeField] private GameObject achievementPanel;
+
+
+    private void Awake()
     {
-        SceneLoader.Instance().OpenGameScene();
+        instance = this;
     }
+
+    void Start()
+    {
+        OpenHome();
+    }
+
+    public void ResetMenu()
+    {
+        homePanel.SetActive(false);
+        levelPanel.SetActive(false);
+        settingPanel.SetActive(false);
+        achievementPanel.SetActive(false);
+        shopPanel.SetActive(false);
+    }
+
+    public void OpenSetting()
+    {
+        ResetMenu();
+        settingPanel.SetActive(true);
+    }
+
+    public void OpenHome()
+    {
+        ResetMenu();
+        homePanel.SetActive(true);
+    }
+
+    public void OpenLevel()
+    {
+        ResetMenu();
+        levelPanel.SetActive(true);
+    }
+
+    public void OpenAchievement()
+    {
+        ResetMenu();
+        achievementPanel.SetActive(true);
+    }
+
+    public void OpenShop()
+    {
+        ResetMenu();
+        shopPanel.SetActive(true);
+    }
+
+
 }
