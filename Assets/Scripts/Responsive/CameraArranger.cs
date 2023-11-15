@@ -9,19 +9,21 @@ public class CameraArranger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        
+        Vector3 camPos = transform.position;
+        camPos.y -= .7f;
+        transform.position = camPos;
         Debug.Log("   " + Camera.main.aspect);
 
-        for (int i =0;i<aspectRatioList.Count;i++)
+        for (int i = 0; i < aspectRatioList.Count; i++)
         {
-            
-            if (aspectRatioList[i].aspect>= Camera.main.aspect)
+
+            if (aspectRatioList[i].aspect >= Camera.main.aspect)
             {
                 Camera.main.orthographicSize = aspectRatioList[i].size;
-              
+
             }
         }
+
     }
 
 }

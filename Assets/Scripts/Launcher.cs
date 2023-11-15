@@ -109,6 +109,7 @@ public class Launcher : MonoBehaviour
         collectBallCount++;
         if(collectBallCount>=numberOfBalls)
         {
+            ScoreManager.Instance().ResetMultiplier();
             launchReady = true;
             launchPoint = collectPoint;
             collectBallCount = 0;

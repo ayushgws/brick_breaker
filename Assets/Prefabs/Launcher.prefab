@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 6935929968481035410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.11, z: 0}
+  m_LocalPosition: {x: 0, y: -3.853365, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,6 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchPosition: {fileID: 1904584669467081762}
-  numberOfBalls: 15
+  numberOfBalls: 5
   launchReady: 1
   collectBallCount: 0

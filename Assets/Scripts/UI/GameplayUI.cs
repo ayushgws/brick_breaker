@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class GameplayUI : MonoBehaviour
 {
-
     private static GameplayUI instance;
+    
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject gameplayScreen;
     [SerializeField] private GameObject gameOverScreen;
-
-
+    [SerializeField] private GameObject gameWinnerScreen;
 
     public static GameplayUI Instance()
     {
@@ -24,21 +23,33 @@ public class GameplayUI : MonoBehaviour
 
     public void ResetScreen()
     {
-
+        gameplayScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        gameWinnerScreen.SetActive(false);
+        pauseScreen.SetActive(false);
     }
 
-    public void ShowPauseScreen(bool show)
+    public void OpenPauseScreen()
     {
-        pauseScreen.SetActive(show);
+        ResetScreen();
+        pauseScreen.SetActive(true);
     }
 
-    public void ShowGameOverScreen(bool show)
+    public void OpenGameOver()
     {
-        gameOverScreen.SetActive(show);
+        ResetScreen();
+        gameOverScreen.SetActive(true); ;
     }
 
     public void ShowGamePlayScreen()
     {
-            
+        ResetScreen();
+        gameplayScreen.SetActive(true);
+    }
+
+    public void OpenWinnerScreen()
+    {
+        ResetScreen();
+        gameWinnerScreen.SetActive(true);
     }
 }
