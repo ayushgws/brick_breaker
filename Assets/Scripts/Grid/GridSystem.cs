@@ -66,6 +66,7 @@ public class GridSystem : MonoBehaviour
 
     public void BrickDestroyed()
     {
+        ScoreManager.Instance().BrickBreak();
         brickDestroyCount++;
         if (brickDestroyCount>=totalBrick)
         {

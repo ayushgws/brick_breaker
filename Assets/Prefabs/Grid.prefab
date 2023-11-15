@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5467268068677939176}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.08, y: 3.0289998, z: 0}
+  m_LocalPosition: {x: -2.07, y: 3.0289998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8830907221497217099}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -119,17 +119,20 @@ MonoBehaviour:
     - brickStrength: 1
     - brickStrength: 1
     - brickStrength: 1
-  - row:
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
     - brickStrength: 1
   - row:
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+    - brickStrength: 1
+  - row:
+    - brickStrength: 1
     - brickStrength: 1
     - brickStrength: 1
     - brickStrength: 1
@@ -141,8 +144,8 @@ MonoBehaviour:
     - brickStrength: 1
   startLocation: {fileID: 6586939269784880646}
   endPoint: {fileID: 0}
-  width: 0.52
-  height: 0.52
+  width: 0.46
+  height: 0.46
   brickParent: {fileID: 2557389170129133817}
   totalBrick: 0
   brickDestroyCount: 0

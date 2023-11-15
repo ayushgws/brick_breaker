@@ -44,4 +44,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    public void RestartCurrentLevel()
+    {
+       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }
