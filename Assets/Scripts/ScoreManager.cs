@@ -15,7 +15,9 @@ public class ScoreManager : MonoBehaviour
     private int currentScore;
     private static ScoreManager instance;
 
-    public static ScoreManager Instance() {  return instance; }
+    public static ScoreManager Instance() 
+    {  return instance; 
+    }
 
     private void Awake()
     {
