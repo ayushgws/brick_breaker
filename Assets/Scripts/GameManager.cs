@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 
     private bool startGame;
 
-    private static GameManager Instance()
+    private bool isPaused;
+    public static GameManager Instance()
     {
         return instance;
     }
@@ -22,6 +23,21 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
 
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        isPaused= false;
+    }
+
+    public bool IsPaused()
+    {
+        return isPaused;
     }
 
      
