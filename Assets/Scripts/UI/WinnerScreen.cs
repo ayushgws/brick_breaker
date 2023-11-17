@@ -11,19 +11,26 @@ public class WinnerScreen : MonoBehaviour
     [SerializeField] private Button btnRestart;
     [SerializeField] private Button btnNextLevel;
 
+    [SerializeField] private TextMeshProUGUI txtScore;
+
     public void Start()
     {
         btnRestart.onClick.AddListener(RestartLevel);
         btnMenu.onClick.AddListener(OpenMenu);
         btnNextLevel.onClick.AddListener(NextLevel);
-
+        ShowScore();
     }
-
+    public void ShowScore()
+    {
+        txtScore.text = ScoreManager.Instance().GetScore().ToString();
+    }
     private void RestartLevel()
     {
-       
-        SceneLoader.Instance().RestartCurrentLevel();
+        
+       SceneLoader.Instance().RestartCurrentLevel();
+
     }
+
     private void OpenMenu()
     {
         
@@ -33,4 +40,5 @@ public class WinnerScreen : MonoBehaviour
     {
         
     }
+
 }

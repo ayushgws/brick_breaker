@@ -17,7 +17,6 @@ public class GridSystem : MonoBehaviour
     private List<Brick> bricks;
 
     private static GridSystem instance;
-
     public static GridSystem Instance()
     {
         return instance;
@@ -51,25 +50,29 @@ public class GridSystem : MonoBehaviour
                     brick.SetRowAndCol(i, j);
                     bricks.Add(brick);
                     totalBrick++;
+                    
                 }
                 startPoint.x += width;
             }
             startPoint.x = startLocation.position.x;
             startPoint.y -= height;
+            
         }
+        Debug.Log(totalBrick);
     }
 
     public void MoveDown()
     {
         brickParent.transform.Translate(0, -height, 0);
     }
-
-    public void BrickDestroyed()
+  public void BrickDestroyed()
     {
         ScoreManager.Instance().BrickBreak();
+        GameplayUI.Instance().UpdateScore();
         brickDestroyCount++;
         if (brickDestroyCount>=totalBrick)
         {
+           GameManager.Instance().Winner();
             Debug.Log("Game Win");
         }
         

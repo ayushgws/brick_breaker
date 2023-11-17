@@ -29,6 +29,11 @@ public class GameplayUI : MonoBehaviour
         pauseScreen.SetActive(false);
     }
 
+    public void UpdateScore()
+    {
+        gameplayScreen.GetComponent<GameplayScreen>().ShowScore();
+    }
+
     public void OpenPauseScreen()
     {
         ResetScreen();

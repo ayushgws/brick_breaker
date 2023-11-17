@@ -10,7 +10,7 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] private Button btnMenu;
     [SerializeField] private Button btnRestart;
     
-    public void Start()
+    void Start()
     {
         btnRestart.onClick.AddListener(RestartLevel);
         btnMenu.onClick.AddListener(OpenMenu);

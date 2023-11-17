@@ -54,7 +54,7 @@ public class Brick : MonoBehaviour
     {
         breakCount--;
         AudioManager.Instance()?.PlayCollideSound();
-        if (breakCount <= 0)
+        if (breakCount == 0)
         {
             GridSystem.Instance().BrickDestroyed();
             gameObject.SetActive(false);
@@ -70,6 +70,7 @@ public class Brick : MonoBehaviour
     {
         if (!b_GameOver)
         {
+            GameplayUI.Instance().OpenGameOver();
             Debug.Log("GameOver");
         }
     }

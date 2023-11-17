@@ -40,6 +40,13 @@ public class GameManager : MonoBehaviour
         return isPaused;
     }
 
-     
+     public void GameOver()
+    {
+        GameplayUI.Instance().OpenGameOver();
+    }
 
+    public void Winner()
+    { 
+     GameplayUI.Instance().OpenWinnerScreen();
+    }
 }
