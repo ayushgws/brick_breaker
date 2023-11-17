@@ -38,7 +38,7 @@ public class WinnerScreen : MonoBehaviour
     }
     private void NextLevel()
     {
-        
+        SceneLoader.Instance().LoadLevel();
     }
 
 }

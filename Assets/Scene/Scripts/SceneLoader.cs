@@ -48,8 +48,10 @@ public class SceneLoader : MonoBehaviour
     {
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void OpenNextLevel()
-    { 
-     
+    public void LoadLevel()
+    {
+        // load the nextlevel
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }
