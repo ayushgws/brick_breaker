@@ -17,6 +17,7 @@ public class GameoverScreen : MonoBehaviour
     {
         btnRestart.onClick.AddListener(RestartLevel);
         btnMenu.onClick.AddListener(OpenMenu);
+        ShowScore();
 
     }
     

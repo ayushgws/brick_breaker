@@ -10,7 +10,7 @@ public class CameraArranger : MonoBehaviour
     void Start()
     {
         Vector3 camPos = transform.position;
-        camPos.y -= .7f;
+        camPos.y -= .5f;
         transform.position = camPos;
         Debug.Log("   " + Camera.main.aspect);
 
