@@ -53,6 +53,7 @@ public class Brick : MonoBehaviour
     public void BallCollide()
     {
         breakCount--;
+
         AudioManager.Instance()?.PlayCollideSound();
         if (breakCount == 0)
         {
