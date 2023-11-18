@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,7 +33,13 @@ public class AudioManager : MonoBehaviour
     {
         background_audioSource.clip = backgroundSound;
         background_audioSource.Play();
+        CheckSetting();
+    }
 
+    public void CheckSetting()
+    {
+        sfx_AudioSource.mute = (PlayerPrefs.GetInt("Sound",1)==1)?false:true;
+        background_audioSource.mute = (PlayerPrefs.GetInt("Music", 1) == 1) ? false : true;
     }
 
     public void PlayCollideSound()
