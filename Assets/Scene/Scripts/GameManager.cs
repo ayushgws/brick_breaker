@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private bool startGame;
 
     private bool isPaused;
+
+    private bool isWin;
     public static GameManager Instance()
     {
         return instance;
@@ -45,8 +47,24 @@ public class GameManager : MonoBehaviour
         GameplayUI.Instance().OpenGameOver();
     }
 
+    /*public void Time()
+    {
+        Invoke("Winner", 3);
+    }*/
     public void Winner()
-    { 
-     GameplayUI.Instance().OpenWinnerScreen();
+    {
+        //Invoke(" GameplayUI.Instance().OpenWinnerScreen()", 3);
+        
+        isWin = true;
+    }
+
+    public bool IsWin()
+    {
+        return isWin;
+    }
+
+    public void ShowWinner()
+    {
+        GameplayUI.Instance().OpenWinnerScreen();
     }
 }

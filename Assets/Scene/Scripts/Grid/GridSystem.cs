@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class GridSystem : MonoBehaviour
     public int totalBrick;
     public int brickDestroyCount=0;
     private List<Brick> bricks;
+    
 
     private static GridSystem instance;
     public static GridSystem Instance()
@@ -67,14 +69,19 @@ public class GridSystem : MonoBehaviour
     }
   public void BrickDestroyed()
     {
+
         ScoreManager.Instance().BrickBreak();
         GameplayUI.Instance().UpdateScore();
         brickDestroyCount++;
-        if (brickDestroyCount>=totalBrick)
-        {
-           GameManager.Instance().Winner();
-            Debug.Log("Game Win");
-        }
+       
+        
+            if (brickDestroyCount >= totalBrick)
+            { 
+                GameManager.Instance().Winner();
+                
+            }
+        
+      
         
     }
 }

@@ -117,6 +117,7 @@ public class Launcher : MonoBehaviour
             }
         }
 
+
     }
 
     public void CollectBall(Ball ball)
@@ -136,6 +137,11 @@ public class Launcher : MonoBehaviour
         collectBallCount++;
         if(collectBallCount>=numberOfBalls)
         {
+            if(GameManager.Instance().IsWin())
+            {
+                GameManager.Instance().ShowWinner();
+                return;
+            }
             ScoreManager.Instance().ResetMultiplier();
             launchReady = true;
             launchPoint = collectPoint;
@@ -144,9 +150,10 @@ public class Launcher : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void  StartGame()
     {
         launchReady =true;
+       
     }
 
 }
