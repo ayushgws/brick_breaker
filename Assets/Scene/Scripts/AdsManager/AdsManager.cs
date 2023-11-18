@@ -7,7 +7,7 @@ public class AdsManager : MonoBehaviour
 {
     private static AdsManager instance;
 
-    
+    private int adTime;
     public static AdsManager Instance()
     {
         return instance;
@@ -112,6 +112,16 @@ public class AdsManager : MonoBehaviour
         }
     }
 
+
+    public void CheckAdsTime()
+    {
+        adTime++;
+        if(adTime>=3)
+        {
+            ShowInterstitialAd();
+            adTime = 0;
+        }
+    }
 
 
 

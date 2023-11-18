@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     private bool isPaused;
 
     private bool isWin;
+    private bool isGameOver;
     public static GameManager Instance()
     {
         return instance;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
 
      public void GameOver()
     {
+        AdsManager.Instance().CheckAdsTime();
         GameplayUI.Instance().OpenGameOver();
     }
 
@@ -51,9 +54,17 @@ public class GameManager : MonoBehaviour
     {
         Invoke("Winner", 3);
     }*/
-    public void Winner()
+
+
+    public void SetWinner()
     {
         //Invoke(" GameplayUI.Instance().OpenWinnerScreen()", 3);
+        string count = SceneManager.GetActiveScene().name.Substring(5);
+        int levelCount = int.Parse(count)+1;
+        if (PlayerPrefs.GetInt("UnlockedLevel")<levelCount)
+        {
+            PlayerPrefs.SetInt("UnlockedLevel", levelCount);
+        }
         
         isWin = true;
     }
@@ -65,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowWinner()
     {
+        AdsManager.Instance().CheckAdsTime();
         GameplayUI.Instance().OpenWinnerScreen();
     }
 }
