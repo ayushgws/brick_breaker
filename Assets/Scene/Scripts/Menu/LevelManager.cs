@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,15 +17,33 @@ public class LevelManager : MonoBehaviour
 
     private List<GameObject> levelList = new List<GameObject>();
 
+    private int unlockedLevel;
+
     private void Start()
     {
+
+        unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel",1);
+        
+
         btnClose.onClick.AddListener(Close);
 
         for(int i =1;i<=levelCount; i++) 
         {
+            
            GameObject levelObj =  Instantiate(levelButtonPrefab, levelContainer.transform);
            levelObj.GetComponent<LevelButton>().SetLevelName(levelNamePrefix + i);
-           levelList.Add(levelObj);
+           levelObj.GetComponent<LevelButton>().SetLevelCount(i);
+          
+            if (i <= unlockedLevel)
+            {
+                levelObj.GetComponent<LevelButton>().HighlightImage();
+            }
+            else
+            {
+                levelObj.GetComponent<Button>().enabled = false;
+                levelObj.GetComponent<LevelButton>().SetLockedImage();
+            }
+            levelList.Add(levelObj);
         }
     }
 
@@ -32,4 +51,6 @@ public class LevelManager : MonoBehaviour
     {
         MenuController.Instance().OpenHome();
     }
+
+    
 }
