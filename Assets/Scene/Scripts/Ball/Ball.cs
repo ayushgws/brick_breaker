@@ -89,6 +89,7 @@ public class Ball : MonoBehaviour
         move = true;
         ballStopped = false;
         startCheckingMove = false;
+        movingtoLaunchLocation = false;
         StartCoroutine(Co_Shoot());
     }
 
