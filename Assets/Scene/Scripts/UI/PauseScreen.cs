@@ -12,17 +12,23 @@ public class PauseScreen : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI txtScore;
 
+     
     void Start()
     {
         btnRestart.onClick.AddListener(RestartLevel);
         btnMenu.onClick.AddListener(OpenMenu);
         btnResume.onClick.AddListener(Resume);
-        ShowScore();
-     
+    }
+
+     void OnEnable()
+    {
+        ShowScore();    
     }
     public void ShowScore()
     {
+        //Time.timeScale = 1;
         txtScore.text = ScoreManager.Instance().GetScore().ToString();
+       
     }
 
     private void RestartLevel()
