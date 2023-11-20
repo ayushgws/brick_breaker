@@ -71,7 +71,7 @@ public class Brick : MonoBehaviour
     {
         if (!b_GameOver)
         {
-            GameplayUI.Instance().OpenGameOver();
+            GameManager.Instance().GameOver();
             Debug.Log("GameOver");
         }
     }

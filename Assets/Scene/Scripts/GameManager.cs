@@ -46,8 +46,13 @@ public class GameManager : MonoBehaviour
 
      public void GameOver()
     {
-        AdsManager.Instance().CheckAdsTime();
-        GameplayUI.Instance().OpenGameOver();
+        if (!isGameOver)
+        {
+            AdsManager.Instance().CheckAdsTime();
+            GameplayUI.Instance().OpenGameOver();
+
+            isGameOver = true;
+        }
     }
 
     /*public void Time()

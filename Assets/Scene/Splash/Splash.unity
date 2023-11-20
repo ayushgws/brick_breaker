@@ -309,10 +309,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4381985083254861068, guid: 9289b3602a0143045b54e1c70c9ffbbf, type: 3}
-      propertyPath: collideSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 8e8218f6a01e74bd5894788e3f912635, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

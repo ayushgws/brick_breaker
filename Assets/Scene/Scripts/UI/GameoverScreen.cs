@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameoverScreen : MonoBehaviour
 {
+   
 
     [SerializeField] private Button btnRestart;
     [SerializeField] private Button btnMenu;
@@ -13,15 +14,21 @@ public class GameoverScreen : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI txtScore;
 
+    
+   // [SerializeField] private AudioClip backgroundSound;
+
+    
     private void Start()
     {
         btnRestart.onClick.AddListener(RestartLevel);
         btnMenu.onClick.AddListener(OpenMenu);
         ShowScore();
-
+        BackgroundSound();
     }
-    
-
+    public void BackgroundSound()
+    {
+        AudioManager.Instance().GameOverSound();
+    }
     public void ShowScore()
     {
         txtScore.text = ScoreManager.Instance().GetScore().ToString();

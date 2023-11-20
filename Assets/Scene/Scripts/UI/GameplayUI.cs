@@ -43,7 +43,7 @@ public class GameplayUI : MonoBehaviour
     public void OpenGameOver()
     {
         ResetScreen();
-        gameOverScreen.SetActive(true); ;
+        gameOverScreen.SetActive(true); 
     }
 
     public void ShowGamePlayScreen()

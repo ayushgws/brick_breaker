@@ -19,6 +19,11 @@ public class WinnerScreen : MonoBehaviour
         btnMenu.onClick.AddListener(OpenMenu);
         btnNextLevel.onClick.AddListener(NextLevel);
         ShowScore();
+        BackgroundSound();
+    }
+    public void BackgroundSound()
+    {
+        AudioManager.Instance().GameWinSound();
     }
     public void ShowScore()
     {
