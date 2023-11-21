@@ -38,9 +38,6 @@ public class AudioManager : MonoBehaviour
     {
         background_audioSource.clip = backgroundSound;
         background_audioSource.Play();
-<<<<<<< HEAD
-        //soundplayed = false;
-=======
         CheckSetting();
     }
 
@@ -48,7 +45,7 @@ public class AudioManager : MonoBehaviour
     {
         sfx_AudioSource.mute = (PlayerPrefs.GetInt("Sound",1)==1)?false:true;
         background_audioSource.mute = (PlayerPrefs.GetInt("Music", 1) == 1) ? false : true;
->>>>>>> 12d87bbf0156a253eb840f917e36f2bfebb50b7c
+
     }
 
     public void PlayCollideSound()

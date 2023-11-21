@@ -765,7 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interstitialAdUnitId: ca-app-pub-6761821497536654/4032651330
   _testinterstitialAdID: ca-app-pub-3940256099942544/1033173712
-  _testMode: 1
+  _testMode: 0
 --- !u!4 &891264639
 Transform:
   m_ObjectHideFlags: 0
