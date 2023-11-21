@@ -38,23 +38,27 @@ public class GameplayUI : MonoBehaviour
     {
         ResetScreen();
         pauseScreen.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(ShowGamePlayScreen);
     }
 
     public void OpenGameOver()
     {
         ResetScreen();
-        gameOverScreen.SetActive(true); 
+        gameOverScreen.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(MenuController.Instance().OpenHome);
     }
 
     public void ShowGamePlayScreen()
     {
         ResetScreen();
         gameplayScreen.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(OpenPauseScreen);
     }
 
     public void OpenWinnerScreen()
     {
         ResetScreen();
         gameWinnerScreen.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(MenuController.Instance().OpenHome);
     }
 }
