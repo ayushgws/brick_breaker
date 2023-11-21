@@ -15,6 +15,7 @@ public class PauseScreen : MonoBehaviour
      
     void Start()
     {
+
         btnRestart.onClick.AddListener(RestartLevel);
         btnMenu.onClick.AddListener(OpenMenu);
         btnResume.onClick.AddListener(Resume);
