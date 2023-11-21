@@ -43,18 +43,21 @@ public class MenuController : MonoBehaviour
     {
         ResetMenu();
         settingPanel.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
 
     public void OpenHome()
     {
         ResetMenu();
         homePanel.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(QuitGame);
     }
 
     public void OpenLevel()
     {
         ResetMenu();
         levelPanel.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
 
     public void OpenAchievement()
@@ -68,6 +71,11 @@ public class MenuController : MonoBehaviour
         ResetMenu();
         shopPanel.SetActive(true);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 
 
 }

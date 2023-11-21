@@ -38,4 +38,6 @@ public class HomePanel : MonoBehaviour
     {
         MenuController.Instance().OpenShop();
     }
+
+  
 }
