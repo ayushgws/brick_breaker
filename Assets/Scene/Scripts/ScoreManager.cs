@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private int brickBreakScore;
 
-    private int scoreMultiplier;
+    private int scoreMultiplier =1;
     private int currentScore;
     private static ScoreManager instance;
 

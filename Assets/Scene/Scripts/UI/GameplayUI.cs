@@ -21,6 +21,11 @@ public class GameplayUI : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        ShowGamePlayScreen();
+    }
+
     public void ResetScreen()
     {
         gameplayScreen.SetActive(false);
@@ -45,7 +50,7 @@ public class GameplayUI : MonoBehaviour
     {
         ResetScreen();
         gameOverScreen.SetActive(true);
-        BackButton.Instance().SetBackButtonCallback(MenuController.Instance().OpenHome);
+        BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
 
     public void ShowGamePlayScreen()
@@ -59,6 +64,11 @@ public class GameplayUI : MonoBehaviour
     {
         ResetScreen();
         gameWinnerScreen.SetActive(true);
-        BackButton.Instance().SetBackButtonCallback(MenuController.Instance().OpenHome);
+        BackButton.Instance().SetBackButtonCallback(OpenHome);
+    }
+
+    public void OpenHome()
+    {
+        SceneLoader.Instance().OpenHomeScene();
     }
 }

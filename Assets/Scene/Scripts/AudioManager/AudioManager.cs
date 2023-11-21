@@ -56,12 +56,11 @@ public class AudioManager : MonoBehaviour
     public void GameOverSound()
     {
 
-        if (!gameoverSoundPlayed)
-        {
+      
             sfx_AudioSource.clip = gameoverSound;
             sfx_AudioSource.Play();
             gameoverSoundPlayed = true;
-        }
+      
        
     }
 
