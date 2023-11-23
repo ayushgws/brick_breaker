@@ -15,7 +15,7 @@ public class AdsManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance)
+        if (instance)
         {
             Destroy(gameObject);
             return;
@@ -31,7 +31,7 @@ public class AdsManager : MonoBehaviour
     [SerializeField] private bool _testMode;
     private string _adUnitId;
 
-    
+
     private InterstitialAd _interstitialAd;
 
     /// <summary>
@@ -107,7 +107,7 @@ public class AdsManager : MonoBehaviour
         }
         else
         {
-            
+
             Debug.LogError("Interstitial ad is not ready yet.");
         }
     }
@@ -116,7 +116,7 @@ public class AdsManager : MonoBehaviour
     public void CheckAdsTime()
     {
         adTime++;
-        if(adTime>=3)
+        if (adTime >= 3)
         {
             ShowInterstitialAd();
             adTime = 0;
