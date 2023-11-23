@@ -16,6 +16,8 @@ public enum GameDirection
 
 public class Ball : MonoBehaviour
 {
+   
+
     public float speed;             
     public Vector2 direction;       
     public Rigidbody2D rig;         
@@ -91,8 +93,19 @@ public class Ball : MonoBehaviour
         startCheckingMove = false;
         movingtoLaunchLocation = false;
         StartCoroutine(Co_Shoot());
+        
     }
-    
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+         if (collision.tag == "BallCollect")
+         {
+             Destroy(collision.gameObject);
+            
+            Launcher.Instance().AddBall(transform.position,direction);  
+
+        }
+       
+    }
     IEnumerator Co_Shoot()
     {
         yield return new WaitForSeconds(0.1f);

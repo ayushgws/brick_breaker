@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Scripting;
+
 public static class RaycastUtilities
 {
+  
     public static bool PointerIsOverUI(Vector2 screenPos)
     {
         var hitObject = UIRaycast(ScreenPosToPointerData(screenPos));
-        Debug.Log(hitObject != null && hitObject.layer == LayerMask.NameToLayer("UI"));
-        
         return hitObject != null && hitObject.layer == LayerMask.NameToLayer("UI");
     }
 
@@ -20,6 +20,7 @@ public static class RaycastUtilities
 
         return results.Count < 1 ? null : results[0].gameObject;
     }
+
     static PointerEventData ScreenPosToPointerData(Vector2 screenPos)
        => new(EventSystem.current) { position = screenPos };
 }
@@ -35,6 +36,9 @@ public class Launcher : MonoBehaviour
     private Vector3 TouchPosition;
     [SerializeField] private int numberOfBalls;
     private List<Ball> ballList;
+
+ 
+    
     public bool launchReady;
     public int collectBallCount;
     [SerializeField]private LayerMask layer;
@@ -56,19 +60,30 @@ public class Launcher : MonoBehaviour
     private void Start()
     {
         launchPoint = launchPosition.position;
-       
+        SpawnBall();
     }
 
-    public void Multiply()
+    public void  SpawnBall()
     {
-
-        numberOfBalls = numberOfBalls * 2;
-
+        ballList = new List<Ball>();
+        int firedBall = 0;
+        while (numberOfBalls > firedBall)
+        {
+            firedBall++;
+            GameObject ballObject = PoolingManager.Instance().GetPrefab("Ball");
+            ballObject.transform.position = launchPoint;
+            ballObject.SetActive(true);
+            Ball ball = ballObject.GetComponent<Ball>();
+            ballList.Add(ball);
+            //AudioManager.Instance().GunFire();
+        }
     }
+
 
     // Update is called once per frame
     void Update()
     {
+
         if (launchReady && !GameManager.Instance().IsPaused())
         {
 
@@ -87,9 +102,10 @@ public class Launcher : MonoBehaviour
                 StartCoroutine(ShootBalls());
 
             }
+            
         }
-        
     }
+  
 
     IEnumerator ShootBalls()
     {
@@ -97,28 +113,7 @@ public class Launcher : MonoBehaviour
 
         launchReady = false;
         collectPointSet = false;
-        if (ballList == null)
-        {
-            ballList = new List<Ball>();
 
-            int firedBall = 0;
-            while (numberOfBalls > firedBall)
-            {
-                GameObject ballObject = PoolingManager.Instance().GetPrefab("Ball");
-                firedBall++;
-                ballObject.transform.position = launchPoint;
-                ballObject.SetActive(true);
-
-                Ball ball = ballObject.GetComponent<Ball>();
-                ball.SetDirection(Direction);
-                ball.Shoot();
-                ballList.Add(ball);
-                yield return new WaitForSeconds(.05f);
-
-            }
-        }
-        else
-        {
             for (int i = 0; i < ballList.Count; i++)
             {
                 ballList[i].transform.position = launchPoint;
@@ -126,14 +121,15 @@ public class Launcher : MonoBehaviour
                 ballList[i].Shoot();
                 yield return new WaitForSeconds(0.05f);
             }
-        }
+        
 
 
     }
 
     public void CollectBall(Ball ball)
     {
-        
+
+
         if (!collectPointSet)
         {
             collectPointSet = true;
@@ -160,13 +156,28 @@ public class Launcher : MonoBehaviour
             GridSystem.Instance().MoveDown();
         }
     }
-   
+    public void AddBall(Vector3 position,Vector2 direction)
+    {
+        GameObject ballObject = PoolingManager.Instance().GetPrefab("Ball");
+        ballObject.transform.position = position;
+        ballObject.SetActive(true);
+        Ball ball = ballObject.GetComponent<Ball>();
+        ball.direction = direction;
+        ball.Shoot();
+        ballList.Add(ball);
+        numberOfBalls++;
+        AudioManager.Instance().spritessound();
+        //Spritessound.Instance().OnTrigger();
+    }
+  
+  
+  
     public void  StartGame()
     {
-        launchReady =true;     
+        launchReady =true;
+        
+
     }
-   
+
 }
-
-
 

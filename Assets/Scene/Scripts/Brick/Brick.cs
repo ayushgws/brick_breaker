@@ -9,8 +9,6 @@ public class Brick : MonoBehaviour
     
     [SerializeField] private TextMeshPro txtCount;
     [SerializeField] private SpriteRenderer imgBrick;
-    [SerializeField] GameObject explosionEffect;
-    [SerializeField]  GameObject touchEffect;
 
     private int row;
     private int col;
@@ -54,18 +52,14 @@ public class Brick : MonoBehaviour
 
     public void BallCollide()
     {
-
-        
         breakCount--;
-        if(breakCount >1)
-        {
-            Instantiate(touchEffect, transform.position, Quaternion.identity);
-        }
+
         AudioManager.Instance()?.PlayCollideSound();
         if (breakCount == 0)
         {
             GridSystem.Instance().BrickDestroyed();
-            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+           AudioManager.Instance().BrickDestroyedSound();
+
             gameObject.SetActive(false);
         }
         else
@@ -88,7 +82,8 @@ public class Brick : MonoBehaviour
     {
         if (!b_Waning)
         {
-            Debug.Log("Warning");
+            Debug.Log("Waning");
+            AudioManager.Instance().warningsound();
         }
     }
 

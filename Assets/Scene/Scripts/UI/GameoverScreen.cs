@@ -43,5 +43,6 @@ public class GameoverScreen : MonoBehaviour
     {
         SceneLoader.Instance().OpenHomeScene();
     }
+   
 
 }

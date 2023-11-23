@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - GameOverLine
   - WarningLine
+  - BallCollect
   layers:
   - Default
   - TransparentFX
