@@ -36,7 +36,7 @@ public class GameplayScreen : MonoBehaviour
     public void MultiplyBalls()
     {
 
-        Launcher.Instance().Multiply();
+       //Launcher.Instance().Multiply();
 
     }
 

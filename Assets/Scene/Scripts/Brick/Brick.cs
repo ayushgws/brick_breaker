@@ -9,6 +9,8 @@ public class Brick : MonoBehaviour
     
     [SerializeField] private TextMeshPro txtCount;
     [SerializeField] private SpriteRenderer imgBrick;
+    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] private GameObject TouchEffect;
 
     private int row;
     private int col;
@@ -55,10 +57,16 @@ public class Brick : MonoBehaviour
         breakCount--;
 
         AudioManager.Instance()?.PlayCollideSound();
+        if(breakCount > 1) 
+        {
+            Instantiate(TouchEffect, transform.position, Quaternion.identity);
+        }
         if (breakCount == 0)
         {
+            
             GridSystem.Instance().BrickDestroyed();
-           AudioManager.Instance().BrickDestroyedSound();
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            AudioManager.Instance().BrickDestroyedSound();
 
             gameObject.SetActive(false);
         }
