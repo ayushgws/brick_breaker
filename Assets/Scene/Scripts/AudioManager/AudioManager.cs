@@ -16,8 +16,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip gameoverSound;
     [SerializeField] private AudioClip gamewinSound;
 
-    [SerializeField] private bool gameoverSoundPlayed;
-    [SerializeField] private bool gamewinSoundPlayed;
+   
     public static AudioManager Instance()
     {
         return instance;
@@ -59,7 +58,7 @@ public class AudioManager : MonoBehaviour
       
             sfx_AudioSource.clip = gameoverSound;
             sfx_AudioSource.Play();
-            gameoverSoundPlayed = true;
+           
       
        
     }
@@ -68,6 +67,6 @@ public class AudioManager : MonoBehaviour
     {
         sfx_AudioSource.clip = gamewinSound;
         sfx_AudioSource.Play();
-        gamewinSoundPlayed = true;
+       
     }
 }

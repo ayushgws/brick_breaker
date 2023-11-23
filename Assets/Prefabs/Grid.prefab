@@ -110,38 +110,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grids:
   - row:
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
   - row:
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
+    - brickStrength: 3
   - row:
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
-    - brickStrength: 1
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
+    - brickStrength: 5
   startLocation: {fileID: 6586939269784880646}
   endPoint: {fileID: 0}
   width: 0.46

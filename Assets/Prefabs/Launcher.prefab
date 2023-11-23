@@ -76,7 +76,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f263dc14ad38241b9100dacc945350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
   launchPosition: {fileID: 1904584669467081762}
   numberOfBalls: 5
   launchReady: 1
   collectBallCount: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 0

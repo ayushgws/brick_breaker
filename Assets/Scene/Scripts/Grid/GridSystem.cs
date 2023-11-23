@@ -72,17 +72,17 @@ public class GridSystem : MonoBehaviour
 
         ScoreManager.Instance().BrickBreak();
         GameplayUI.Instance().UpdateScore();
+        
         brickDestroyCount++;
-       
-        
-            if (brickDestroyCount >= totalBrick)
-            { 
-                GameManager.Instance().SetWinner();
-                
-            }
-        
-      
-        
+
+
+        if (brickDestroyCount >= totalBrick)
+        {
+            GameManager.Instance().SetWinner();
+
+        }
+
+
     }
 }
 

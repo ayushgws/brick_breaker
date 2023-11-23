@@ -92,7 +92,7 @@ public class Ball : MonoBehaviour
         movingtoLaunchLocation = false;
         StartCoroutine(Co_Shoot());
     }
-
+    
     IEnumerator Co_Shoot()
     {
         yield return new WaitForSeconds(0.1f);

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     private bool isWin;
     private bool isGameOver;
+
+    private bool multiply;
     public static GameManager Instance()
     {
         return instance;
@@ -23,6 +25,17 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
+    
+    public void Double()
+    {
+        multiply = true;
+    }
+
+    public bool isDouble()
+    {
+        return multiply;
+    }
+
 
     public void StartGame()
     {

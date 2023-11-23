@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public static class RaycastUtilities
@@ -7,6 +8,8 @@ public static class RaycastUtilities
     public static bool PointerIsOverUI(Vector2 screenPos)
     {
         var hitObject = UIRaycast(ScreenPosToPointerData(screenPos));
+        Debug.Log(hitObject != null && hitObject.layer == LayerMask.NameToLayer("UI"));
+        
         return hitObject != null && hitObject.layer == LayerMask.NameToLayer("UI");
     }
 
@@ -17,7 +20,6 @@ public static class RaycastUtilities
 
         return results.Count < 1 ? null : results[0].gameObject;
     }
-
     static PointerEventData ScreenPosToPointerData(Vector2 screenPos)
        => new(EventSystem.current) { position = screenPos };
 }
@@ -57,6 +59,13 @@ public class Launcher : MonoBehaviour
        
     }
 
+    public void Multiply()
+    {
+
+        numberOfBalls = numberOfBalls * 2;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -79,6 +88,7 @@ public class Launcher : MonoBehaviour
 
             }
         }
+        
     }
 
     IEnumerator ShootBalls()
@@ -104,6 +114,7 @@ public class Launcher : MonoBehaviour
                 ball.Shoot();
                 ballList.Add(ball);
                 yield return new WaitForSeconds(.05f);
+
             }
         }
         else
@@ -149,12 +160,13 @@ public class Launcher : MonoBehaviour
             GridSystem.Instance().MoveDown();
         }
     }
-
+   
     public void  StartGame()
     {
-        launchReady =true;
-       
+        launchReady =true;     
     }
-
+   
 }
+
+
 

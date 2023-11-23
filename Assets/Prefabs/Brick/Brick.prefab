@@ -144,6 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtCount: {fileID: 4964654517209267120}
   imgBrick: {fileID: 7225255402865865558}
+  explosionEffect: {fileID: 6006488394680348900, guid: b116c8ff83cfdc54d97b9df43d622fd0, type: 3}
+  touchEffect: {fileID: 1341693771625618532, guid: 58e0a5450aab8fd4fb2eb0764a10a8d2, type: 3}
 --- !u!1 &2447803039622261395
 GameObject:
   m_ObjectHideFlags: 0
