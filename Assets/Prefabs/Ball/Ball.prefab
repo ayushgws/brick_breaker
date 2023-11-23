@@ -200,21 +200,7 @@ MonoBehaviour:
   speed: 10000
   direction: {x: 0, y: 0}
   rig: {fileID: 9131734236635428658}
-  upRay: {fileID: 7859085607168086303}
-  downRay: {fileID: 3035864265347594695}
-  leftRay: {fileID: 4474344878158904707}
-  rightRay: {fileID: 752513530062816180}
-  lastDirection: 0
-  closetEntity: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 64
   distance: 0.5
-  topDistance: 0
-  bottomDistance: 0
-  leftDistance: 0
-  rightDistance: 0
-  closestDistance: 0
   startCheckingMove: 0
 --- !u!58 &3923940140549902547
 CircleCollider2D:

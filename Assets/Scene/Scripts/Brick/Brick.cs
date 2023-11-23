@@ -58,6 +58,8 @@ public class Brick : MonoBehaviour
         if (breakCount == 0)
         {
             GridSystem.Instance().BrickDestroyed();
+           AudioManager.Instance().BrickDestroyedSound();
+
             gameObject.SetActive(false);
         }
         else
@@ -81,6 +83,7 @@ public class Brick : MonoBehaviour
         if (!b_Waning)
         {
             Debug.Log("Waning");
+            AudioManager.Instance().warningsound();
         }
     }
 
