@@ -92,6 +92,7 @@ public class Brick : MonoBehaviour
         {
             Debug.Log("Waning");
             AudioManager.Instance().warningsound();
+            WallColorChange.Instance().WarningColor();
         }
     }
 
