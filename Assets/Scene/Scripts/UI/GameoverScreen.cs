@@ -24,6 +24,7 @@ public class GameoverScreen : MonoBehaviour
         btnMenu.onClick.AddListener(OpenMenu);
         ShowScore();
         BackgroundSound();
+        
     }
     public void BackgroundSound()
     {
@@ -43,6 +44,6 @@ public class GameoverScreen : MonoBehaviour
     {
         SceneLoader.Instance().OpenHomeScene();
     }
-   
 
+    
 }

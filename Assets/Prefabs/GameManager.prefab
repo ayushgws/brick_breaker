@@ -57,7 +57,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e538397bd22a3b9408e6f5277892850b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star1Score: 30
-  star2Score: 50
-  star3Score: 500
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  Star3: {fileID: 0}
+  star1Score: 100
+  star2Score: 500
+  star3Score: 800
   brickBreakScore: 10

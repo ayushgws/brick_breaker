@@ -6,23 +6,49 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameplayScreen : MonoBehaviour
+  
 {
-
-    //GameObject ballObject = PoolingManager.Instance().GetPrefab("Ball");
+    public GameObject[] Star;
+     
+    [SerializeField] WinnerScreen winnerScreen;
+    [SerializeField]  GameObject WinnerPanel; 
     [SerializeField] private Button btnPause;
     [SerializeField] private Button btnMultiply;
     [SerializeField] private TextMeshProUGUI txtScore;
     [SerializeField] private TextMeshProUGUI txtLevel;
+
+
+    public Image progressbarFill;
+    
+
+
+
+    private void Awake()
+    {
+        winnerScreen = WinnerPanel.GetComponent<WinnerScreen>();
+    }
+
     void Start()
     {
         btnPause.onClick.AddListener(Pause);
-        txtLevel.text = "Level "+SceneManager.GetActiveScene().name.Substring(5);
-        btnMultiply.onClick.AddListener(MultiplyBalls);
+        txtLevel.text = "Level " + SceneManager.GetActiveScene().name.Substring(5);
+        /*if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            MultiplyBalls();
+            Debug.Log("function called");
+        }*/
+        //SetStarbar();
+        
     }
 
     public void ShowScore()
     {
         txtScore.text = ScoreManager.Instance().GetScore().ToString();
+       
+        UpdateProgressBar();
+        ShowStar();
+       
     }
     
     public void Pause()
@@ -35,8 +61,45 @@ public class GameplayScreen : MonoBehaviour
 
     public void MultiplyBalls()
     {
+        //Debug.Log("Calling successfully");
+       Launcher.Instance().Multiply();
 
-       //Launcher.Instance().Multiply();
+    }
+   
+    
+    
+    void UpdateProgressBar()
+    {
+
+        
+        float fillAmount =  (float)ScoreManager.Instance().GetScore() / winnerScreen.star3Score ;
+        progressbarFill.fillAmount = fillAmount;
+       
+    }
+    private void ShowStar()
+    {
+
+
+        if (ScoreManager.Instance().GetScore() >= winnerScreen.star1Score )
+        {
+            //one Star
+            Star[0].SetActive(true);
+            
+        }
+        
+        if (ScoreManager.Instance().GetScore() >= winnerScreen.star2Score)
+        {
+
+            Star[1].SetActive(true);
+            
+
+        }
+        if(ScoreManager.Instance().GetScore() >= winnerScreen.star3Score)
+        {
+
+            Star[2].SetActive(true);
+           
+        }
 
     }
 

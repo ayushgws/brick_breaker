@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
 
-    [SerializeField] private int star1Score;
-    [SerializeField] private int star2Score;
-    [SerializeField] private int star3Score;
+
+   
+    private int maxscore;
 
     [SerializeField] private int brickBreakScore;
 
@@ -34,8 +35,9 @@ public class ScoreManager : MonoBehaviour
     {
         scoreMultiplier = 1;
     }
-
+   
 
     public int GetScore() { return currentScore; }
+   
 
 }

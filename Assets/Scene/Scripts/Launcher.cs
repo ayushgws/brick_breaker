@@ -35,6 +35,7 @@ public class Launcher : MonoBehaviour
     private bool collectPointSet;
     private Vector3 TouchPosition;
     [SerializeField] private int numberOfBalls;
+
     private List<Ball> ballList;
 
  
@@ -42,6 +43,7 @@ public class Launcher : MonoBehaviour
     public bool launchReady;
     public int collectBallCount;
     [SerializeField]private LayerMask layer;
+    //[SerializeField] private bool check = false;
     public static Launcher Instance()
     {
         return instance;
@@ -62,11 +64,13 @@ public class Launcher : MonoBehaviour
         launchPoint = launchPosition.position;
         SpawnBall();
     }
+    
 
     public void  SpawnBall()
     {
         ballList = new List<Ball>();
         int firedBall = 0;
+        
         while (numberOfBalls > firedBall)
         {
             firedBall++;
@@ -78,6 +82,7 @@ public class Launcher : MonoBehaviour
             //AudioManager.Instance().GunFire();
         }
     }
+    
 
 
     // Update is called once per frame
@@ -105,8 +110,15 @@ public class Launcher : MonoBehaviour
             
         }
     }
-  
 
+    public void Multiply()
+    {
+        //if (!check)
+        //{
+            //numberOfBalls = numberOfBalls * 2;
+            //check = true;
+       // }
+    }
     IEnumerator ShootBalls()
     {
         Vector3 Direction = Vector3.Normalize(TouchPosition - launchPoint);
@@ -125,7 +137,7 @@ public class Launcher : MonoBehaviour
 
 
     }
-
+   
     public void CollectBall(Ball ball)
     {
 
@@ -140,7 +152,7 @@ public class Launcher : MonoBehaviour
         {
             ball.SetLaunchDestination(collectPoint);
         }
-
+        
         collectBallCount++;
         if(collectBallCount>=numberOfBalls)
         {
@@ -169,14 +181,13 @@ public class Launcher : MonoBehaviour
         AudioManager.Instance().spritessound();
         //Spritessound.Instance().OnTrigger();
     }
-  
-  
-  
+
+    
+
     public void  StartGame()
     {
         launchReady =true;
         
-
     }
 
 }

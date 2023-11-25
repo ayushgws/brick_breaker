@@ -24,10 +24,7 @@ public class AudioManager : MonoBehaviour
    // [SerializeField] private AudioClip gunfiresound;
    [SerializeField] private AudioClip brickDestroyed;
 
-    [SerializeField] private bool gameoverSoundPlayed;
-    [SerializeField] private bool gamewinSoundPlayed;
-    [SerializeField] private bool Spritessound_sfn;
-    [SerializeField] private bool Brick_sfm;
+    
 
     public static AudioManager Instance()
     {
@@ -68,20 +65,20 @@ public class AudioManager : MonoBehaviour
     {
             sfx_AudioSource.clip = gameoverSound;
             sfx_AudioSource.Play();
-            gameoverSoundPlayed = true;
+          //  gameoverSoundPlayed = true;
     }
 
     public void GameWinSound()
     {
         sfx_AudioSource.clip = gamewinSound;
         sfx_AudioSource.Play();
-        gamewinSoundPlayed = true;
+       // gamewinSoundPlayed = true;
     }
     public void spritessound()
     {
         sfn_AudioSource.clip = Spritessound;
         sfn_AudioSource.Play();
-        Spritessound_sfn = true;
+       // Spritessound_sfn = true;
 
     }
     public void warningsound()
@@ -101,6 +98,6 @@ public class AudioManager : MonoBehaviour
     {
         sfm_AudioSource.clip = brickDestroyed;
         sfm_AudioSource.Play();
-        Brick_sfm = true;
+       // Brick_sfm = true;
     }
 }

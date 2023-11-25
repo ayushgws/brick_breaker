@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameplayUI : MonoBehaviour
 {
     private static GameplayUI instance;
-    
+
+    public WinnerScreen script; 
+
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject gameplayScreen;
     [SerializeField] private GameObject gameOverScreen;
@@ -70,5 +72,12 @@ public class GameplayUI : MonoBehaviour
     public void OpenHome()
     {
         SceneLoader.Instance().OpenHomeScene();
+    }
+
+    public int Get3StarScore()
+    {
+        int maxscore;
+        maxscore = script.star3Score;  
+        return maxscore;
     }
 }

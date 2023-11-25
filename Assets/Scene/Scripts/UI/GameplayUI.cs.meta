@@ -3,7 +3,12 @@ guid: d99bc5e24e3c01a4a9fbd66cc354b532
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - winStar: {instanceID: 0}
+  - pauseScreen: {instanceID: 0}
+  - gameplayScreen: {instanceID: 0}
+  - gameOverScreen: {instanceID: 0}
+  - gameWinnerScreen: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
