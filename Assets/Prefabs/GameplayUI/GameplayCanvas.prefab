@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePlayPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 766910916180942486, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12
+      objectReference: {fileID: 0}
     - target: {fileID: 4194987775340549965, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
       propertyPath: WinnerPanel
       value: 
