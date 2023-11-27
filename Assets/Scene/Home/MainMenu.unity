@@ -812,10 +812,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Home
       objectReference: {fileID: 0}
-    - target: {fileID: 242025538194827220, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1915298825115888827, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -894,14 +890,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915298825115888827, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3440458455413677738, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8000661156197644452, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
