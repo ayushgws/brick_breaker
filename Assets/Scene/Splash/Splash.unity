@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 4381985083254861068, guid: 9289b3602a0143045b54e1c70c9ffbbf, type: 3}
       propertyPath: brickDestroyed
       value: 
-      objectReference: {fileID: 8300000, guid: caa5497143150af469aa24f5dec65b87, type: 3}
+      objectReference: {fileID: 8300000, guid: 9973e8d5a62081449afaf7002dc129fc, type: 3}
     - target: {fileID: 4381985083254861068, guid: 9289b3602a0143045b54e1c70c9ffbbf, type: 3}
       propertyPath: sfm_AudioSource
       value: 
@@ -855,6 +855,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interstitialAdUnitId: ca-app-pub-6761821497536654/4032651330
   _testinterstitialAdID: ca-app-pub-3940256099942544/1033173712
+  _rewardAdsUnitId: ca-app-pub-6761821497536654~3244197745
+  _testrewardAdId: ca-app-pub-3940256099942544/5224354917
   _testMode: 0
 --- !u!4 &891264639
 Transform:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Scripting;
+using UnityEngine.UIElements;
 
 public static class RaycastUtilities
 {
@@ -30,7 +31,7 @@ public class Launcher : MonoBehaviour
     private static Launcher instance;
     [SerializeField] private Transform launchPosition;
     private Vector3 launchPoint ;
-   
+    private bool check;
     private Vector3 collectPoint;
     private bool collectPointSet;
     private Vector3 TouchPosition;
@@ -111,14 +112,7 @@ public class Launcher : MonoBehaviour
         }
     }
 
-    public void Multiply()
-    {
-        //if (!check)
-        //{
-            //numberOfBalls = numberOfBalls * 2;
-            //check = true;
-       // }
-    }
+    
     IEnumerator ShootBalls()
     {
         Vector3 Direction = Vector3.Normalize(TouchPosition - launchPoint);
@@ -182,7 +176,25 @@ public class Launcher : MonoBehaviour
         //Spritessound.Instance().OnTrigger();
     }
 
-    
+    public void Multiply()
+    {
+       /* if (!check)
+        {
+            numberOfBalls = numberOfBalls * 2;
+
+            for (int i = 0; i < numberOfBalls; i++)
+            {
+                GameObject ballObject = PoolingManager.Instance().GetPrefab("Ball");
+                ballObject.transform.position = launchPoint;
+                ballObject.SetActive(true);
+                Ball ball = ballObject.GetComponent<Ball>();
+                ballList.Add(ball);
+                collectBallCount = 0;
+
+            }
+        }
+        check = true;*/
+    }
 
     public void  StartGame()
     {

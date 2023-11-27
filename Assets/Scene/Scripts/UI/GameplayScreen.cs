@@ -32,14 +32,16 @@ public class GameplayScreen : MonoBehaviour
     {
         btnPause.onClick.AddListener(Pause);
         txtLevel.text = "Level " + SceneManager.GetActiveScene().name.Substring(5);
-        /*if (Input.GetKeyDown(KeyCode.Space))
+                 
+    }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
 
             MultiplyBalls();
             Debug.Log("function called");
-        }*/
-        //SetStarbar();
-        
+        }
     }
 
     public void ShowScore()
@@ -84,6 +86,7 @@ public class GameplayScreen : MonoBehaviour
         {
             //one Star
             Star[0].SetActive(true);
+            Star[3].SetActive(false);
             
         }
         
@@ -91,14 +94,14 @@ public class GameplayScreen : MonoBehaviour
         {
 
             Star[1].SetActive(true);
-            
+            Star[4].SetActive(false);
 
         }
         if(ScoreManager.Instance().GetScore() >= winnerScreen.star3Score)
         {
 
             Star[2].SetActive(true);
-           
+            Star[5].SetActive(false);
         }
 
     }

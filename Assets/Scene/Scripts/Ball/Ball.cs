@@ -106,6 +106,8 @@ public class Ball : MonoBehaviour
         }
        
     }
+
+ 
     IEnumerator Co_Shoot()
     {
         yield return new WaitForSeconds(0.1f);

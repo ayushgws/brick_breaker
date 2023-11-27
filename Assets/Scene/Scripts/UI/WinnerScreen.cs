@@ -62,31 +62,27 @@ public class WinnerScreen : MonoBehaviour
         
         int.TryParse(txtScore.text, out score);
 
-            if (score >=star1Score && score< star2Score)
-            {
-                //one Star
-                Star[0].SetActive(true);
-                Star[3].SetActive(false);
-            }
-            else if (score >= star2Score && score< star3Score)
-            {
-                //two star
-                Star[0].SetActive(true);
-                Star[1].SetActive(true);
-                Star[3].SetActive(false);
-                Star[4].SetActive(false);
+        if (score >= star1Score)
+        {
+            //one Star
+            Star[0].SetActive(true);
+            Star[3].SetActive(false);
 
-            }
-            else
-            {
-                //three star
-                Star[0].SetActive(true);
-                Star[1].SetActive(true);
-                Star[2].SetActive(true);
-                Star[3].SetActive(false);
-                Star[4].SetActive(false);
-                Star[5].SetActive(false);
         }
-        
+
+        if (score >= star2Score)
+        {
+
+            Star[1].SetActive(true);
+            Star[4].SetActive(false);
+
+        }
+        if (score >= star3Score)
+        {
+
+            Star[2].SetActive(true);
+            Star[5].SetActive(false);
+        }
+
     }
 }

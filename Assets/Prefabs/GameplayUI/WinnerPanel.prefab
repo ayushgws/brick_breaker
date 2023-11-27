@@ -1398,7 +1398,7 @@ MonoBehaviour:
   - {fileID: 1736542157043614495}
   - {fileID: 8871151217543190165}
   star1Score: 300
-  star2Score: 500
+  star2Score: 600
   star3Score: 1000
   btnMenu: {fileID: 5376273790750442530}
   btnRestart: {fileID: 8462944115288401460}
