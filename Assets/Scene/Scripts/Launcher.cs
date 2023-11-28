@@ -36,7 +36,7 @@ public class Launcher : MonoBehaviour
     private bool collectPointSet;
     private Vector3 TouchPosition;
     [SerializeField] private int numberOfBalls;
-
+    private int launchedBall;
     private List<Ball> ballList;
 
  
@@ -62,6 +62,7 @@ public class Launcher : MonoBehaviour
 
     private void Start()
     {
+        
         launchPoint = launchPosition.position;
         SpawnBall();
     }
