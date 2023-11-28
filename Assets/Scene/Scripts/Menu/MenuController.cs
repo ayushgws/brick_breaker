@@ -41,7 +41,7 @@ public class MenuController : MonoBehaviour
 
     public void OpenSetting()
     {
-        ResetMenu();
+        
         settingPanel.SetActive(true);
         BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
@@ -50,6 +50,12 @@ public class MenuController : MonoBehaviour
     {
         ResetMenu();
         homePanel.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(QuitGame);
+    }
+
+    public void CloseSetting()
+    {
+        settingPanel.SetActive(false);
         BackButton.Instance().SetBackButtonCallback(QuitGame);
     }
 
