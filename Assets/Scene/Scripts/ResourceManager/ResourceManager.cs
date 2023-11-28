@@ -14,12 +14,18 @@ public class ResourceManager : MonoBehaviour
     {
         return instance;
     }
-    
 
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        if (instance)
+        {
+            Destroy(instance);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(instance);
+
         GetLocalStore();
     }
 
@@ -27,15 +33,31 @@ public class ResourceManager : MonoBehaviour
     {
         for (int i = 0; i < resources.Count; i++)
         {
-
+            resources[i].count = PlayerPrefs.GetInt(resources[i].PrefName, 0);
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void SaveData(string name, int count)
     {
-        
+        for (int i = 0; i < resources.Count; i++)
+        {
+            if (resources[i].name == name)
+            {
+                resources[i].count = count;
+            }
+        }
+    }
+
+    public int GetCount(string name)
+    {
+        for(int i=0; i<resources.Count;i++)
+        {
+            if(resources[i].name == name)
+            {
+                return resources[i].count;
+            }
+        }
+        return 0;
     }
 }
 

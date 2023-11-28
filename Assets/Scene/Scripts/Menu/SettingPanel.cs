@@ -8,6 +8,8 @@ public class SettingPanel : MonoBehaviour
     [SerializeField] private Button btnClose;
     [SerializeField] private Button btnSound;
     [SerializeField] private Button btnMusic;
+    [SerializeField] private GameObject music;
+    [SerializeField] private GameObject sound;
 
     [SerializeField] private Sprite soundOn;
     [SerializeField] private Sprite soundOff;
@@ -31,13 +33,16 @@ public class SettingPanel : MonoBehaviour
 
     public void UpdateImage()
     {
-        btnSound.GetComponent<Image>().sprite = (PlayerPrefs.GetInt("Sound", 1) == 1) ? soundOn : soundOff;
-        btnMusic.GetComponent<Image>().sprite = (PlayerPrefs.GetInt("Music", 1) == 1) ? musicOn : musicOff;
+        sound.SetActive((PlayerPrefs.GetInt("Sound", 1) == 1) ? true : false);
+        music.SetActive((PlayerPrefs.GetInt("Music", 1) == 1) ? true : false);
+
+        //btnSound.GetComponent<Image>().sprite = (PlayerPrefs.GetInt("Sound", 1) == 1) ? soundOn : soundOff;
+        //btnMusic.GetComponent<Image>().sprite = (PlayerPrefs.GetInt("Music", 1) == 1) ? musicOn : musicOff;
     }
 
     private void Close()
     {
-        MenuController.Instance().OpenHome();
+        MenuController.Instance().CloseSetting();
     }
 
     private void ToggleSound()

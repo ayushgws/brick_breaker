@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,16 +9,55 @@ public class HomePanel : MonoBehaviour
 {
 
     [SerializeField] private Button btnPlay;
-    [SerializeField] private Button btnAchievement;
+    
     [SerializeField] private Button btnShop;
     [SerializeField] private Button btnSetting;
+    [SerializeField] private Button RewardButton;
+    [SerializeField] private TextMeshProUGUI txtCoin;
+    [SerializeField] private TextMeshProUGUI txtLevelName;
+    [SerializeField] private Button btnQuit;
+    [SerializeField] private Button btnLevel;
     // Start is called before the first frame update
     void Start()
     {
-        btnPlay.onClick.AddListener(OpenLevel);
-        btnAchievement.onClick.AddListener(OpenAchievement);
+        btnPlay.onClick.AddListener(PlayButton);
+
+        //btnAchievement.onClick.AddListener(OpenAchievement);
         btnShop.onClick.AddListener(OpenShop);
         btnSetting.onClick.AddListener(OpenSetting);
+        btnLevel.onClick.AddListener(OpenLevel);
+        btnQuit.onClick.AddListener(Quit);
+        RewardButton.onClick.AddListener(Reward);
+
+        UpdateCoin();
+        UpdateLevel();
+         
+
+    }
+
+    public void UpdateCoin()
+    {
+        txtCoin.text = ResourceManager.Instance().GetCount("Coin").ToString();
+    }
+
+    public void UpdateLevel()
+    {
+        txtLevelName.text = "PLAY LEVEL "+ResourceManager.Instance().GetCount("Level").ToString();
+    }
+
+    public void Reward()
+    {
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void PlayButton()
+    {
+        SceneLoader.Instance().OpenLevel("Level" + ResourceManager.Instance().GetCount("Level"));
     }
 
     public void OpenLevel()
