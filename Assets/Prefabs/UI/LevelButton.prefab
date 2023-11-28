@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ca398b436b814043a2eb89d2e1762a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8aec8fd8119e36a4d8c10d1d37e27bc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53e338174c911724e8079f997cea5e61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97e16550df1c62b408d7f18313e5206a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -293,8 +293,8 @@ MonoBehaviour:
   star3: {fileID: 7630585745407068733}
   image: {fileID: 6012085507526472308}
   txtLevelName: {fileID: 8161811878836198793}
-  lockImage: {fileID: 21300000, guid: 32c2ea8f09f06f340bea964eae717e61, type: 3}
-  highLightImage: {fileID: 21300000, guid: ac370d39e29401048affbec89283d600, type: 3}
+  lockImage: {fileID: 21300000, guid: b12fe0037e564b14080da1566637ecc9, type: 3}
+  highLightImage: {fileID: 21300000, guid: 0bc14fe784516984ba6b7147d3206ff7, type: 3}
 --- !u!1 &8041422580841233648
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 15.4}
+  m_AnchoredPosition: {x: 0, y: 78}
   m_SizeDelta: {x: 97.8713, y: 36.82}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5466852343624967050
