@@ -17,7 +17,7 @@ public class HomePanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI txtLevelName;
     [SerializeField] private Button btnQuit;
     [SerializeField] private Button btnLevel;
- 
+    int level;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +29,6 @@ public class HomePanel : MonoBehaviour
         btnLevel.onClick.AddListener(OpenLevel);
         btnQuit.onClick.AddListener(Quit);
         RewardButton.onClick.AddListener(Reward);
-        
 
         UpdateCoin();
         UpdateLevel();
@@ -44,7 +43,7 @@ public class HomePanel : MonoBehaviour
 
     public void UpdateLevel()
     {
-        int level = ResourceManager.Instance().GetCount("Level");
+         level = ResourceManager.Instance().GetCount("Level");
         if(level > ResourceManager.Instance().MaxLevel)
         {
             level = ResourceManager.Instance().MaxLevel;
@@ -65,7 +64,7 @@ public class HomePanel : MonoBehaviour
 
     public void PlayButton()
     {
-        SceneLoader.Instance().OpenLevel("Level" + ResourceManager.Instance().GetCount("Level"));
+        SceneLoader.Instance().OpenLevel("Level" + level);
     }
 
     public void OpenLevel()
@@ -88,7 +87,6 @@ public class HomePanel : MonoBehaviour
         MenuController.Instance().OpenShop();
 
     }
-    
 
   
 }

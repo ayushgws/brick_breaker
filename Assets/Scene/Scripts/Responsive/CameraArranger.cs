@@ -12,7 +12,7 @@ public class CameraArranger : MonoBehaviour
         Vector3 camPos = transform.position;
         camPos.y -= .5f;
         transform.position = camPos;
-        Debug.Log("   " + Camera.main.aspect);
+  
 
         for (int i = 0; i < aspectRatioList.Count; i++)
         {

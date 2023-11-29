@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99bc5e24e3c01a4a9fbd66cc354b532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 0}
+  script: {fileID: 4428029716003512608}
   pauseScreen: {fileID: 2537858018411506451}
   gameplayScreen: {fileID: 7154042952536873181}
   gameOverScreen: {fileID: 2638757026174731833}
@@ -332,6 +332,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3704804667326652541, guid: 42443fbc65c4b514f8bb3c27f7215f21, type: 3}
   m_PrefabInstance: {fileID: 4188459686182126050}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4428029716003512608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 528012371288744130, guid: 42443fbc65c4b514f8bb3c27f7215f21, type: 3}
+  m_PrefabInstance: {fileID: 4188459686182126050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010131511334898072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e9434a642981e4d8db32f8ef9915fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010131511334898072 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6586682213349034106, guid: 42443fbc65c4b514f8bb3c27f7215f21, type: 3}
@@ -455,22 +466,6 @@ PrefabInstance:
     - target: {fileID: 57313208864745457, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
       propertyPath: m_Name
       value: GamePlayPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3032557144701848303, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
       propertyPath: m_AnchorMax.y

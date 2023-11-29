@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{684D8E0B-1A49-026F-B4B7-86D6FC45E5CB}</ProjectGuid>
+    <ProjectGuid>{8C5CF21E-2B69-0AAF-B812-EAE1CD54DB6A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>CFXREditor</AssemblyName>
