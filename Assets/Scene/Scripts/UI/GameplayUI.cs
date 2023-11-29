@@ -52,8 +52,11 @@ public class GameplayUI : MonoBehaviour
     public void OpenGameOver()
     {
         ResetScreen();
+        
         gameplayScreen.SetActive(true);
+
         gameOverScreen.SetActive(true);
+
         BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
 
@@ -68,6 +71,7 @@ public class GameplayUI : MonoBehaviour
     {
         ResetScreen();
         gameplayScreen.SetActive(true);
+        
         gameWinnerScreen.SetActive(true);
         BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
