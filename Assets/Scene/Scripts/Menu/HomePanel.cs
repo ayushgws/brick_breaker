@@ -17,6 +17,7 @@ public class HomePanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI txtLevelName;
     [SerializeField] private Button btnQuit;
     [SerializeField] private Button btnLevel;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class HomePanel : MonoBehaviour
         btnLevel.onClick.AddListener(OpenLevel);
         btnQuit.onClick.AddListener(Quit);
         RewardButton.onClick.AddListener(Reward);
+        
 
         UpdateCoin();
         UpdateLevel();
@@ -86,6 +88,7 @@ public class HomePanel : MonoBehaviour
         MenuController.Instance().OpenShop();
 
     }
+    
 
   
 }

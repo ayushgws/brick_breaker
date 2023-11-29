@@ -18,6 +18,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject settingPanel;
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private GameObject achievementPanel;
+  
 
 
     private void Awake()
@@ -78,6 +79,7 @@ public class MenuController : MonoBehaviour
         shopPanel.SetActive(true);
         homePanel.SetActive(true);
     }
+   
     public void QuitGame()
     {
         Application.Quit();
