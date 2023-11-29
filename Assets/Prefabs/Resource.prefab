@@ -51,3 +51,7 @@ MonoBehaviour:
   - name: Ball
     count: 0
     PrefName: BallPref
+  - name: Level
+    count: 0
+    PrefName: UnlockedLevel
+  maxLevel: 91
