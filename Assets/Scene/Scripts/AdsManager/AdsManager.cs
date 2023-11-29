@@ -152,8 +152,6 @@ public class AdsManager : MonoBehaviour
             _rewardedAd = null;
         }
 
-        Debug.Log("Loading the rewarded ad.");
-
         // create our request used to load the ad.
         var adRequest = new AdRequest();
 

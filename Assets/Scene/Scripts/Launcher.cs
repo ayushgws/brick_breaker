@@ -95,20 +95,14 @@ public class Launcher : MonoBehaviour
 
         if (launchReady && !GameManager.Instance().IsPaused())
         {
-
-           
-            if (Input.GetKeyDown(KeyCode.Mouse0) && RaycastUtilities.PointerIsOverUI(Input.mousePosition))
-            {
-             
-                
-                Vector3 screenPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
-                TouchPosition = Camera.main.ScreenToWorldPoint(screenPos);
-            }
-
             if (Input.GetKeyUp(KeyCode.Mouse0) && RaycastUtilities.PointerIsOverUI(Input.mousePosition))
             {
-                
-                StartCoroutine(ShootBalls());
+                Vector3 screenPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+                TouchPosition = Camera.main.ScreenToWorldPoint(screenPos);
+                if (TouchPosition.y > launchPoint.y+0.2f)
+                {
+                    StartCoroutine(ShootBalls());
+                }
 
             }
             

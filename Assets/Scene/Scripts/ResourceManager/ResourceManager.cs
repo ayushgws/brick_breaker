@@ -18,18 +18,15 @@ public class ResourceManager : MonoBehaviour
         return instance;
     }
 
-    
-
     void Awake()
     {
         if (instance)
         {
-            Destroy(instance);
+            Destroy(gameObject);
             return;
         }
         instance = this;
-        DontDestroyOnLoad(instance);
-        PlayerPrefs.SetInt("UnlockedLevel", 92);
+        DontDestroyOnLoad(instance);        
         GetLocalStore();
     }
 
@@ -37,13 +34,13 @@ public class ResourceManager : MonoBehaviour
     {
         for (int i = 0; i < resources.Count; i++)
         {
-            if (PlayerPrefs.HasKey(resources[i].name))
+            if (PlayerPrefs.HasKey(resources[i].PrefName))
             {
-                resources[i].count = PlayerPrefs.GetInt(resources[i].PrefName, 0);
+                resources[i].count = PlayerPrefs.GetInt(resources[i].PrefName);
             }
             else
             {
-                PlayerPrefs.SetInt(resources[i].name, resources[i].count);
+                PlayerPrefs.SetInt(resources[i].PrefName, resources[i].count);
             }
         }
     }

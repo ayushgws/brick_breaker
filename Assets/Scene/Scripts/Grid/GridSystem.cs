@@ -41,16 +41,15 @@ public class GridSystem : MonoBehaviour
         {
             for (int j = 0; j < grids[i].row.Count; j++)
             {
-                if (maxWallStrength < grids[i].row.Count)
+                if (maxWallStrength < grids[i].row[j].brickStrength)
                 {
-                    maxWallStrength = grids[i].row.Count;
+                    maxWallStrength = grids[i].row[j].brickStrength;
                 }
             }
         }
     }
     public void CreateBricks()
     {
-        Debug.Log(maxWallStrength+"     ---------");
         startPoint = startLocation.position;
         bricks = new List<Brick>();
         for(int i =0;i<grids.Count;i++)
@@ -78,7 +77,6 @@ public class GridSystem : MonoBehaviour
             startPoint.y -= height;
             
         }
-        Debug.Log(totalBrick);
     }
 
     public void MoveDown()

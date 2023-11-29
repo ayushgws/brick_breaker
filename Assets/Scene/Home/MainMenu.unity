@@ -857,28 +857,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.data[3].name
-      value: MultiplyBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.data[4].name
-      value: Fireball
-      objectReference: {fileID: 0}
-    - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.data[1].count
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.data[3].PrefName
-      value: MultiplyBallPref
-      objectReference: {fileID: 0}
-    - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.data[4].PrefName
-      value: FireballPref
+      propertyPath: resources.Array.data[2].count
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4006636687633282604, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
       propertyPath: m_Name
