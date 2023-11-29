@@ -1188,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 489246196669887433, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
+      propertyPath: m_fontSize
+      value: 66.45
+      objectReference: {fileID: 0}
     - target: {fileID: 1366447475430418355, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
       propertyPath: m_SizeDelta.x
       value: 450.96
