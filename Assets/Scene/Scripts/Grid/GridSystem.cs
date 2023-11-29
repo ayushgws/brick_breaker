@@ -16,6 +16,7 @@ public class GridSystem : MonoBehaviour
     public int totalBrick;
     public int brickDestroyCount=0;
     private List<Brick> bricks;
+    private int maxWallStrength;
     
 
     private static GridSystem instance;
@@ -31,10 +32,25 @@ public class GridSystem : MonoBehaviour
 
     public void Start()
     {
+        GetMaxBrickStrength();
         CreateBricks();
+    }
+    public void GetMaxBrickStrength()
+    {
+        for (int i = 0; i < grids.Count; i++)
+        {
+            for (int j = 0; j < grids[i].row.Count; j++)
+            {
+                if (maxWallStrength < grids[i].row.Count)
+                {
+                    maxWallStrength = grids[i].row.Count;
+                }
+            }
+        }
     }
     public void CreateBricks()
     {
+        Debug.Log(maxWallStrength+"     ---------");
         startPoint = startLocation.position;
         bricks = new List<Brick>();
         for(int i =0;i<grids.Count;i++)
@@ -48,8 +64,10 @@ public class GridSystem : MonoBehaviour
                     gameobjectBrick.transform.position = startPoint;
                     gameobjectBrick.SetActive(true);
                     Brick brick = gameobjectBrick.GetComponent<Brick>();
+                    brick.SetMaxBreakStrength(maxWallStrength);
                     brick.SetBreakCount(grids[i].row[j].brickStrength);
                     brick.SetRowAndCol(i, j);
+                    
                     bricks.Add(brick);
                     totalBrick++;
                     
@@ -96,4 +114,5 @@ public class GridRow
 public class UnitGrid
 {
     public int brickStrength;
+    public BrickColor color;
 }

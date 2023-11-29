@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HomePanel : MonoBehaviour
+public class HomePanel : MonoBehaviour, RewardCallback
 {
 
     [SerializeField] private Button btnPlay;
@@ -15,8 +15,12 @@ public class HomePanel : MonoBehaviour
     [SerializeField] private Button RewardButton;
     [SerializeField] private TextMeshProUGUI txtCoin;
     [SerializeField] private TextMeshProUGUI txtLevelName;
+    [SerializeField] private TextMeshProUGUI txtBallCount;
+
     [SerializeField] private Button btnQuit;
     [SerializeField] private Button btnLevel;
+    private int level;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +35,14 @@ public class HomePanel : MonoBehaviour
 
         UpdateCoin();
         UpdateLevel();
-         
+        UpdateBallCount();
+        AdsManager.Instance().SetRewardCallback(this);
 
+    }
+
+    public void UpdateBallCount()
+    {
+        txtCoin.text = ResourceManager.Instance().GetCount("Ball").ToString();
     }
 
     public void UpdateCoin()
@@ -42,7 +52,7 @@ public class HomePanel : MonoBehaviour
 
     public void UpdateLevel()
     {
-        int level = ResourceManager.Instance().GetCount("Level");
+         level = ResourceManager.Instance().GetCount("Level");
         if(level > ResourceManager.Instance().MaxLevel)
         {
             level = ResourceManager.Instance().MaxLevel;
@@ -53,7 +63,7 @@ public class HomePanel : MonoBehaviour
 
     public void Reward()
     {
-
+        AdsManager.Instance().ShowRewardedAd();
     }
 
     public void Quit()
@@ -63,7 +73,7 @@ public class HomePanel : MonoBehaviour
 
     public void PlayButton()
     {
-        SceneLoader.Instance().OpenLevel("Level" + ResourceManager.Instance().GetCount("Level"));
+        SceneLoader.Instance().OpenLevel("Level" + level);
     }
 
     public void OpenLevel()
@@ -86,5 +96,11 @@ public class HomePanel : MonoBehaviour
         MenuController.Instance().OpenShop();
     }
 
-  
+
+
+    public void RewardGranted()
+    {
+        ResourceManager.Instance().AddData("Coin", 30);
+        UpdateCoin();
+    }
 }

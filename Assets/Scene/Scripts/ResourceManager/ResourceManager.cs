@@ -29,7 +29,7 @@ public class ResourceManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(instance);
-
+        PlayerPrefs.SetInt("UnlockedLevel", 92);
         GetLocalStore();
     }
 
@@ -37,7 +37,14 @@ public class ResourceManager : MonoBehaviour
     {
         for (int i = 0; i < resources.Count; i++)
         {
-            resources[i].count = PlayerPrefs.GetInt(resources[i].PrefName, 0);
+            if (PlayerPrefs.HasKey(resources[i].name))
+            {
+                resources[i].count = PlayerPrefs.GetInt(resources[i].PrefName, 0);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(resources[i].name, resources[i].count);
+            }
         }
     }
 
@@ -48,6 +55,19 @@ public class ResourceManager : MonoBehaviour
             if (resources[i].name == name)
             {
                 resources[i].count = count;
+                PlayerPrefs.SetInt(resources[i].PrefName, resources[i].count);
+            }
+        }
+    }
+
+    public void AddData(string name,int count)
+    {
+        for (int i = 0; i < resources.Count; i++)
+        {
+            if (resources[i].name == name)
+            {
+                resources[i].count += count;
+                PlayerPrefs.SetInt(resources[i].PrefName, resources[i].count);
             }
         }
     }

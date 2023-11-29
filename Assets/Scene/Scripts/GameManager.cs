@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
     {
         //Invoke(" GameplayUI.Instance().OpenWinnerScreen()", 3);
         string count = SceneManager.GetActiveScene().name.Substring(5);
+        Launcher.Instance().SaveBall();
         int levelCount = int.Parse(count)+1;
         if (PlayerPrefs.GetInt("UnlockedLevel")<levelCount)
         {
