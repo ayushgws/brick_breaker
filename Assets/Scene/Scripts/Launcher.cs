@@ -93,7 +93,7 @@ public class Launcher : MonoBehaviour
     void Update()
     {
 
-        if (launchReady && !GameManager.Instance().IsPaused())
+        if (launchReady && !GameManager.Instance().IsPaused() &&!GameManager.Instance().IsGameOver())
         {
             if (Input.GetKeyUp(KeyCode.Mouse0) && RaycastUtilities.PointerIsOverUI(Input.mousePosition))
             {
