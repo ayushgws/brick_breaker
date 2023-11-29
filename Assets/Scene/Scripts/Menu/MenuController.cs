@@ -76,6 +76,7 @@ public class MenuController : MonoBehaviour
     {
         ResetMenu();
         shopPanel.SetActive(true);
+        homePanel.SetActive(true);
     }
     public void QuitGame()
     {
