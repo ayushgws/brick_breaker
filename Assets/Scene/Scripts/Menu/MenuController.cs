@@ -41,7 +41,7 @@ public class MenuController : MonoBehaviour
 
     public void OpenSetting()
     {
-        
+        homePanel.SetActive(true);
         settingPanel.SetActive(true);
         BackButton.Instance().SetBackButtonCallback(OpenHome);
     }

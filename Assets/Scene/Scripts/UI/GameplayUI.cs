@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class GameplayUI : MonoBehaviour
@@ -51,7 +52,11 @@ public class GameplayUI : MonoBehaviour
     public void OpenGameOver()
     {
         ResetScreen();
+        
+        gameplayScreen.SetActive(true);
+
         gameOverScreen.SetActive(true);
+
         BackButton.Instance().SetBackButtonCallback(OpenHome);
     }
 
@@ -65,6 +70,8 @@ public class GameplayUI : MonoBehaviour
     public void OpenWinnerScreen()
     {
         ResetScreen();
+        gameplayScreen.SetActive(true);
+        
         gameWinnerScreen.SetActive(true);
         BackButton.Instance().SetBackButtonCallback(OpenHome);
     }

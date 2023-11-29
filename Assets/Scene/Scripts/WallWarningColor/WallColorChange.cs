@@ -33,7 +33,7 @@ public class WallColorChange : MonoBehaviour
         yield return new WaitForSeconds(2);
         for (int i = 0; i < 4; i++)
         {
-            WallColor[i].GetComponent<SpriteRenderer>().color = Color.black;
+            WallColor[i].GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 }

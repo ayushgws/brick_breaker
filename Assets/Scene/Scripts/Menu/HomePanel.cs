@@ -42,7 +42,13 @@ public class HomePanel : MonoBehaviour
 
     public void UpdateLevel()
     {
-        txtLevelName.text = "PLAY LEVEL "+ResourceManager.Instance().GetCount("Level").ToString();
+        int level = ResourceManager.Instance().GetCount("Level");
+        if(level > ResourceManager.Instance().MaxLevel)
+        {
+            level = ResourceManager.Instance().MaxLevel;
+        }
+  
+        txtLevelName.text = "PLAY LEVEL "+level.ToString();
     }
 
     public void Reward()

@@ -10,11 +10,15 @@ public class ResourceManager : MonoBehaviour
 
     private static ResourceManager instance;
 
+    [SerializeField] private int maxLevel;
+
+    public int MaxLevel { get { return maxLevel; } }
     public static ResourceManager Instance()
     {
         return instance;
     }
 
+    
 
     void Awake()
     {

@@ -27,7 +27,7 @@ public class PauseScreen : MonoBehaviour
     }
     public void ShowScore()
     {
-        //Time.timeScale = 1;
+        
         txtScore.text = ScoreManager.Instance().GetScore().ToString();
        
     }

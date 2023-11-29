@@ -456,6 +456,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePlayPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612009228033699181, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032557144701848303, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032557144701848303, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032557144701848303, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032557144701848303, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4194987775340549965, guid: 0d136fea44be2ab4b9ec2a4e2e0c9079, type: 3}
       propertyPath: WinnerPanel
       value: 
