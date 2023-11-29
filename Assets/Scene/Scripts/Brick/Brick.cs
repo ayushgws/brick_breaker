@@ -1,8 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+
+[System.Serializable]
+public class BrickColor
+{
+    public Color32 startColor;
+    public Color32 endColor;
+}
+
 
 public class Brick : MonoBehaviour
 {
@@ -11,6 +21,7 @@ public class Brick : MonoBehaviour
     [SerializeField] private SpriteRenderer imgBrick;
     [SerializeField] private GameObject touchEffect;
     [SerializeField] private GameObject explosionEffect;
+    private BrickColor color;
 
     private int row;
     private int col;
@@ -19,6 +30,7 @@ public class Brick : MonoBehaviour
 
     private bool b_GameOver = false;
     private bool b_Waning = false;
+    private int maxBreakStrength = 20;
 
     public void SetRowAndCol(int row,int col)
     {
@@ -33,6 +45,16 @@ public class Brick : MonoBehaviour
         UpdateBreakCount();
         
     }
+
+    public void SetMaxBreakStrength(int maxBreakStrength)
+    {
+        this.maxBreakStrength = maxBreakStrength;
+    }
+    
+    public void SetColor(BrickColor color)
+    {
+       this.color = color;
+    }
     
     private void UpdateBreakCount()
     {
@@ -41,8 +63,9 @@ public class Brick : MonoBehaviour
 
     private void UpdateBrickImage()
     {
-        int dif = 20 - breakCount;
-        float value = (float)dif / 20;
+        
+        int dif = maxBreakStrength - breakCount; 
+        float value = (float)dif / maxBreakStrength;
         imgBrick.color = new Color(value, value, 1, 1);
 
         //if (ImageLoader.Instance())

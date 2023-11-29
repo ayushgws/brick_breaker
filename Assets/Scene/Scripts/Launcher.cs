@@ -36,11 +36,9 @@ public class Launcher : MonoBehaviour
     private bool collectPointSet;
     private Vector3 TouchPosition;
     [SerializeField] private int numberOfBalls;
-
+    private int launchedBall;
     private List<Ball> ballList;
 
- 
-    
     public bool launchReady;
     public int collectBallCount;
     [SerializeField]private LayerMask layer;
@@ -63,9 +61,14 @@ public class Launcher : MonoBehaviour
     private void Start()
     {
         launchPoint = launchPosition.position;
+        numberOfBalls = ResourceManager.Instance().GetCount("Ball");
         SpawnBall();
     }
     
+    public void SaveBall()
+    {
+        ResourceManager.Instance().SaveData("Ball", numberOfBalls);
+    }
 
     public void  SpawnBall()
     {
@@ -97,14 +100,14 @@ public class Launcher : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0) && RaycastUtilities.PointerIsOverUI(Input.mousePosition))
             {
              
-       
+                
                 Vector3 screenPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
                 TouchPosition = Camera.main.ScreenToWorldPoint(screenPos);
             }
 
             if (Input.GetKeyUp(KeyCode.Mouse0) && RaycastUtilities.PointerIsOverUI(Input.mousePosition))
             {
-             
+                
                 StartCoroutine(ShootBalls());
 
             }

@@ -33,6 +33,7 @@ public class AdsManager : MonoBehaviour
 
     [SerializeField] private string _testrewardAdId = "ca-app-pub-3940256099942544/5224354917";
 
+    private RewardCallback _rewardCallback;
 
 
     [SerializeField] private bool _testMode;
@@ -41,6 +42,11 @@ public class AdsManager : MonoBehaviour
     private RewardedAd _rewardedAd;
 
     private InterstitialAd _interstitialAd;
+
+    public void SetRewardCallback(RewardCallback callback)
+    { 
+        _rewardCallback = callback;
+    }
 
     /// <summary>
     /// Loads the interstitial ad.
@@ -102,6 +108,7 @@ public class AdsManager : MonoBehaviour
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
             LoadInterstitialAd();
+            LoadRewardedAd();
         });
     }
 
@@ -214,7 +221,8 @@ public class AdsManager : MonoBehaviour
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
-            Debug.Log("Rewarded ad full screen content closed.");
+            _rewardCallback.RewardGranted();
+            LoadRewardedAd();
         };
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>

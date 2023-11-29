@@ -84,6 +84,7 @@ public class HomePanel : MonoBehaviour
     public void OpenShop()
     {
         MenuController.Instance().OpenShop();
+
     }
 
   
