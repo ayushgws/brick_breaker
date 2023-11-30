@@ -93,14 +93,23 @@ public class Launcher : MonoBehaviour
     void Update()
     {
 
+        
+
         if (launchReady && !GameManager.Instance().IsPaused() &&!GameManager.Instance().IsGameOver())
         {
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GameplayUI.Instance().DisableInstruction();
+            }
+
             if (Input.GetKeyUp(KeyCode.Mouse0) && RaycastUtilities.PointerIsOverUI(Input.mousePosition))
             {
                 Vector3 screenPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
                 TouchPosition = Camera.main.ScreenToWorldPoint(screenPos);
                 if (TouchPosition.y > launchPoint.y+0.2f)
                 {
+                    
+                   
                     StartCoroutine(ShootBalls());
                 }
 
@@ -113,7 +122,22 @@ public class Launcher : MonoBehaviour
     IEnumerator ShootBalls()
     {
         Vector3 Direction = Vector3.Normalize(TouchPosition - launchPoint);
+        
+        float x, y, factor;
 
+        y = Direction.y;
+        x = Direction.x;
+        if (x > y)
+        {
+            factor = 0.1f / x;
+        }
+        else
+        {
+            factor = 0.1f / y;
+        }
+        Direction *= factor;
+
+        
         launchReady = false;
         collectPointSet = false;
 
