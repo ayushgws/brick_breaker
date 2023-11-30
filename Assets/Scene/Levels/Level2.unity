@@ -524,6 +524,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -536,16 +540,20 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[0].brickStrength
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[1].brickStrength
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[2].brickStrength
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[3].brickStrength
@@ -565,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[7].brickStrength
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[8].brickStrength
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[9].brickStrength
@@ -577,83 +585,123 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[0].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[1].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[2].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[3].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[4].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[5].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[6].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[7].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[8].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[9].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[0].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[1].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[2].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[3].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[4].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[5].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[6].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[7].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[8].brickStrength
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[9].brickStrength
-      value: 4
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[0].brickStrength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[1].brickStrength
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[2].brickStrength
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[3].brickStrength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[4].brickStrength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[5].brickStrength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[6].brickStrength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[7].brickStrength
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[8].brickStrength
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
+      propertyPath: grids.Array.data[3].row.Array.data[9].brickStrength
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3199013921997936258, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: m_LocalPosition.x
