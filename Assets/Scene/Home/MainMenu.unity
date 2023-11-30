@@ -1899,6 +1899,10 @@ PrefabInstance:
       propertyPath: txtBallCount
       value: 
       objectReference: {fileID: 2114483313}
+    - target: {fileID: 4963767576968968350, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7138495882493252272, guid: 41f0627f341603d4aa64a581e64b9e24, type: 3}
       propertyPath: m_Name
       value: Cointext
