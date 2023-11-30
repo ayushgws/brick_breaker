@@ -6,12 +6,22 @@ public class GameplayUI : MonoBehaviour
 {
     private static GameplayUI instance;
 
-    public WinnerScreen script; 
+    public WinnerScreen script;
 
+    [SerializeField] private GameObject Instruction;
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject gameplayScreen;
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject gameWinnerScreen;
+
+    public void EnableInstruction()
+    {
+        Instruction.SetActive(true);
+    }
+
+    public void DisableInstruction() {
+        Instruction.SetActive(false);
+    }
 
     public static GameplayUI Instance()
     {

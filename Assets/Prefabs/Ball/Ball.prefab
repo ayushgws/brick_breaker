@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e8f2e2f53bbe744ab334ed1c7f148c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10000
+  speed: 5000
   direction: {x: 0, y: 0}
   rig: {fileID: 9131734236635428658}
   distance: 0.5
