@@ -1145,10 +1145,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 622339078533129654, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
-      propertyPath: resources.Array.data[2].count
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4006636687633282604, guid: 968331bb437fad14aae85a71099de2ad, type: 3}
       propertyPath: m_Name
       value: Resource
