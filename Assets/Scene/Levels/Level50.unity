@@ -397,6 +397,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5302448159745390019, guid: 9b3de8042527d0b4c9e14019acb42c3c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302448159745390019, guid: 9b3de8042527d0b4c9e14019acb42c3c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302448159745390019, guid: 9b3de8042527d0b4c9e14019acb42c3c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302448159745390019, guid: 9b3de8042527d0b4c9e14019acb42c3c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5520352306912915006, guid: 9b3de8042527d0b4c9e14019acb42c3c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -472,11 +488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[4].brickStrength
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[5].brickStrength
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[0].row.Array.data[6].brickStrength
@@ -512,11 +528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[4].brickStrength
-      value: 11
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[5].brickStrength
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[1].row.Array.data[6].brickStrength
@@ -540,35 +556,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[1].brickStrength
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[2].brickStrength
-      value: 11
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[3].brickStrength
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[4].brickStrength
-      value: 9
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[5].brickStrength
-      value: 8
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[6].brickStrength
-      value: 10
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[7].brickStrength
-      value: 11
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[8].brickStrength
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[2].row.Array.data[9].brickStrength
@@ -580,35 +596,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[1].brickStrength
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[2].brickStrength
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[3].brickStrength
-      value: 11
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[4].brickStrength
-      value: 13
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[5].brickStrength
-      value: 14
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[6].brickStrength
-      value: 12
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[7].brickStrength
-      value: 13
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[8].brickStrength
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[3].row.Array.data[9].brickStrength
@@ -632,11 +648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[4].row.Array.data[4].brickStrength
-      value: 11
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[4].row.Array.data[5].brickStrength
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[4].row.Array.data[6].brickStrength
@@ -672,11 +688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[5].row.Array.data[4].brickStrength
-      value: 15
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[5].row.Array.data[5].brickStrength
-      value: 11
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1393791926247759910, guid: 6af4df52c56d33a4288979f3e8a7945d, type: 3}
       propertyPath: grids.Array.data[5].row.Array.data[6].brickStrength
