@@ -111,37 +111,247 @@ MonoBehaviour:
   grids:
   - row:
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
   - row:
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 3
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
   - row:
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
     - brickStrength: 5
+      color:
+        startColor:
+          serializedVersion: 2
+          rgba: 0
+        endColor:
+          serializedVersion: 2
+          rgba: 0
   startLocation: {fileID: 6586939269784880646}
   endPoint: {fileID: 0}
   width: 0.46
