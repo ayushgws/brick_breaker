@@ -27,6 +27,7 @@ public class ResourceManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(instance);
+        
         GetLocalStore();
     }
 

@@ -49,10 +49,10 @@ MonoBehaviour:
     count: 0
     PrefName: CoinPref
   - name: Ball
-    count: 30
+    count: 4
     PrefName: BallPref
   - name: Level
-    count: 0
+    count: 1
     PrefName: UnlockedLevel
   - name: MultiplyBall
     count: 0
