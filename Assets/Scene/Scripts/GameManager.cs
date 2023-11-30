@@ -68,6 +68,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool IsGameOver()
+    {
+        return isGameOver;
+    }
+
     /*public void Time()
     {
         Invoke("Winner", 3);

@@ -42,9 +42,8 @@ public class MenuController : MonoBehaviour
 
     public void OpenSetting()
     {
-        homePanel.SetActive(true);
         settingPanel.SetActive(true);
-        BackButton.Instance().SetBackButtonCallback(OpenHome);
+        BackButton.Instance().SetBackButtonCallback(CloseSetting);
     }
 
     public void OpenHome()
@@ -75,9 +74,22 @@ public class MenuController : MonoBehaviour
 
     public void OpenShop()
     {
-        ResetMenu();
+      
         shopPanel.SetActive(true);
-        homePanel.SetActive(true);
+        BackButton.Instance().SetBackButtonCallback(CloseShop);
+    }
+
+    public void CloseShop()
+    {
+        shopPanel.SetActive(false);
+        BackButton.Instance().SetBackButtonCallback(QuitGame);
+    }
+
+    public void UpdateResource()
+    {
+        homePanel.GetComponent<HomePanel>().UpdateCoin();
+        homePanel.GetComponent<HomePanel>().UpdateBallCount();
+
     }
    
     public void QuitGame()
