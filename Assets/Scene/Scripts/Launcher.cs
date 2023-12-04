@@ -108,8 +108,6 @@ public class Launcher : MonoBehaviour
                 TouchPosition = Camera.main.ScreenToWorldPoint(screenPos);
                 if (TouchPosition.y > launchPoint.y+0.2f)
                 {
-                    
-                   
                     StartCoroutine(ShootBalls());
                 }
 
