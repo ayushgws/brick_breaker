@@ -124,7 +124,6 @@ public class AdsManager : MonoBehaviour
         }
         else
         {
-
             Debug.LogError("Interstitial ad is not ready yet.");
         }
     }

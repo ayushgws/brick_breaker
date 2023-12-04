@@ -79,6 +79,7 @@ public class ResourceManager : MonoBehaviour
                 return resources[i].count;
             }
         }
+        
         return 0;
     }
 }
