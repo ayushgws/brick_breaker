@@ -58,7 +58,7 @@ public class HomePanel : MonoBehaviour, RewardCallback
             level = ResourceManager.Instance().MaxLevel;
         }
   
-        txtLevelName.text = "PLAY LEVEL "+level.ToString();
+        txtLevelName.text = "LEVEL "+level.ToString();
     }
 
     public void Reward()
