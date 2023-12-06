@@ -12,6 +12,7 @@ public class Instantiator : MonoBehaviour
         {
             Instantiate(gameObjectList[i],new Vector3(0,0,0),Quaternion.identity);
         }
+        Destroy(gameObject);
     }
 
 }
